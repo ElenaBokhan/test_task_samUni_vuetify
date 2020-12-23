@@ -7,7 +7,8 @@ import { faSearch, faSort } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueLodash from 'vue-lodash'
 import lodash from 'lodash'
- 
+import vuetify from './plugins/vuetify';
+
 Vue.use(VueLodash, { name: 'custom' , lodash: lodash })
 
 library.add(faSearch)
@@ -19,5 +20,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  vuetify,
+  render: h => h(App)
 }).$mount('#app')
